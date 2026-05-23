@@ -1,0 +1,132 @@
+How to create a repo on github:
+1. Create new repo
+2. copy 3 lines of code
+3. Open terminal in folder
+4. Paste
+5. git status
+6. git add <file> (or) .
+7. git commit -m <Text>
+8. git push (to update repo)
+
+================================================
+
+How to create and merge a branch
+1. git checkout -b <branchname>
+2. Make changes
+3. git add .
+4. git commit -m <text>
+5. git push -u origin <branchname>
+6. Go to github - Compare and pull request
+7. create PR
+8. Merge
+9. git checkout main
+10. git pull
+
+================================================
+
+How to delete branches
+1. git branch -d <branchname> (or) git push origin --delete <branchname>
+
+================================================
+
+How to check log history
+1. git log --oneline
+
+================================================
+
+Undo changes
+1. git restore <filename>
+
+================================================
+
+.gitignore
+(Prevents useless stuff from getting pushed)
+__pycache__/
+*.pyc
+.env
+venv/
+
+================================================
+
+Merge conflicts
+1. Open the file you merged
+2. Replace the section with conflict
+3. finalise the merge by committing it
+
+================================================
+
+Git stash (Temporarily hides codes)
+1. Modify a file but do not commit
+2. git stash (reverts back to original code)
+3. git stash pop (to restore changes)
+
+================================================
+
+Issues:
+Used to highlight any bugs, issues or discussions
+
+================================================
+
+Projects:
+Act as a timeline
+
+================================================
+
+Open-Source workflow:
+1. Fork a repo (Creates local copy in your github)
+2. Clone it (Creates local copy in your device)
+3. git clone <forked-repo-url>
+4. git remote add upstream <og-repo-url>
+5. git remote -v
+6. Create a branch
+7. Commit changes
+8. git push origin <branchname>
+9. Compare and pull request
+
+================================================
+
+Tags:
+1. Go to a repo
+2. git tag v<Number>
+3. git push origin v<Number>
+
+================================================
+
+Releases (Using tags)
+Draft new release -> Select version
+
+================================================
+
+Actions:
+Automated workflow
+1. Create .github
+2. Create workflows
+3. Create <filename>.yml
+4. 
+name: <Workflow name>
+
+on: [push] (Action)
+
+jobs:
+  <filename>:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: <Action name>
+        run: echo <Text>
+5. commit and push
+
+================================================
+
+Repo structure:
+project/
+│
+├── README.md
+├── .gitignore
+├── requirements.txt
+├── src/
+├── tests/
+├── docs/
+└── .github/
+
+================================================
